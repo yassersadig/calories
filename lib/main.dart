@@ -1,6 +1,5 @@
 import 'package:calories/screens/items.dart';
 import 'package:flutter/material.dart';
-import 'package:calories/components/chart.dart';
 
 void main() => runApp(MyApp());
 
