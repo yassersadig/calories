@@ -2,12 +2,9 @@ import 'package:calories/models/item.dart';
 import 'package:calories/providers/databaseProvider.dart';
 
 newItem(Item newItem) async {
-  // DatabaseProvider dbProvider = DatabaseProvider._();
   final db = await DatabaseProvider.provider.database;
-  //get the biggest id in the table
   var table = await db.rawQuery("SELECT MAX(id)+1 as id FROM Items");
   int id = table.first["id"];
-  //insert to the table using the new id
 
   var raw = await db.rawInsert(
       "INSERT Into Items (id,name,calories,protein)"

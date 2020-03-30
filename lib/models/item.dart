@@ -1,12 +1,11 @@
 import 'dart:convert';
-
 import 'package:calories/models/unitOfMeasure.dart';
 import 'package:flutter/material.dart';
 
 class Item {
   int id;
   String name;
-  String photo;
+  Image photo;
   int calories;
   int protein;
   UnitOfMeasure unit;
